@@ -1,11 +1,11 @@
-from django.contrib.auth import get_user_model
+from django.conf import settings
 
 from channels.generic.websocket import JsonWebsocketConsumer
 
 from . import AbstractSocketRouter, BaseMessage, SocketResult, RouteInfo, StatusCodes
 from .tools import route_to_method_name, result_is_successful
 
-User = get_user_model()
+User = settings.AUTH_USER_MODEL
 
 
 class SocketRouterConsumer(JsonWebsocketConsumer, AbstractSocketRouter):

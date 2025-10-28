@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=64", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
 
 [project]
 name = "django-channels-router"
-version = "1.0.0"
+version = "1.0.3"
 description = "HTTP-style WebSocket routing for Django Channels."
 readme = "README.md"
 requires-python = ">=3.11"
